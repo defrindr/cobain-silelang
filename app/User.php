@@ -15,7 +15,7 @@ class User extends UserModel
 	];
 
 	public function petugas(){
-		return $this->hasOne('App\Petugas','id_petugas','id');
+		return $this->hasOne('App\Petugas','id_user','id');
 	} 
 	public function masyarakat(){
 		return $this->hasOne('App\Masyarakat','id_user','id');

@@ -41,14 +41,14 @@ class petugasSeeder extends Seeder
         	"alamat" => "Jl. manggalima No.5",
         	"nip" => $nikOp,
         	"id_user" => $id_user,
-        	"photo" => "/operator.png"
+        	"photo" => "defrindr.png"
         ];
 
         petugas::create($dataoperator);
 
         // 
         
-    	$level = Level::where(['nama' => 'Adminstrator'])->get()[0]->id;
+    	$level = Level::where(['nama' => 'Administrator'])->get()[0]->id;
 
         $dataUser = [
         	"username" => "administrator",
@@ -65,7 +65,7 @@ class petugasSeeder extends Seeder
         	"alamat" => "Jl. manggalima No.5",
         	"nip" => $nikAd,
         	"id_user" => $id_user,
-        	"photo" => "/administrator.png"
+        	"photo" => "defrindr.png"
         ];
 
         petugas::create($dataadministrator);

@@ -17,6 +17,7 @@ class CreateMasyarakatsTable extends Migration
             $table->bigIncrements('id');
             $table->string('nama');
             $table->text('alamat');
+            $table->string('telp');
             $table->string('photo');
             $table->unsignedBigInteger('id_user');
             $table->timestamps();

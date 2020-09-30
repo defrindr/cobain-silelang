@@ -30,9 +30,10 @@ class masyarakatSeeder extends Seeder
 
         $dataMasyarakat = [
         	"nama" => "masyarakat",
-        	"alamat" => "Jl. manggalima No.5",
+            "alamat" => "Jl. manggalima No.5",
+            "telp" => "08560412340",
         	"id_user" => $id_user,
-        	"photo" => "/masyarakat.png"
+        	"photo" => "defrindr.png"
         ];
 
         Masyarakat::create($dataMasyarakat);

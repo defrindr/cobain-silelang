@@ -25,9 +25,6 @@ use App\Helpers\RoleHelper;
 					@include('layouts.alert')
 					@if(RoleHelper::admin() || RoleHelper::op())
 						<a href="{{ route('lelang.index') }}" class="btn btn-default">Cancel</a>
-						<a href="{{ route('lelang.edit',['id' => $lelang->id]) }}" class="btn btn-primary">
-							<i class="fa fa-pencil"></i> Edit
-						</a>
 						<form action="{{ route('lelang.destroy',['id' => $lelang->id]) }}" method="POST" class="d-inline-block">
 							@csrf()
 							@method('DELETE')

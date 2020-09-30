@@ -8,6 +8,7 @@ use App\Masyarakat;
 use App\HistoryLelang;
 use App\Petugas;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class LelangController extends Controller
 {
@@ -66,6 +67,8 @@ class LelangController extends Controller
         $lelang = new Lelang;
         $lelang->id_barang = $request->id_barang;
         $lelang->id_petugas = \Auth::user()->petugas->id;
+        $lelang->id_masyarakat = null;
+        $lelang->harga_akhir = 0;
         $lelang->status = 'dibuka';
 
         if($lelang->save()){

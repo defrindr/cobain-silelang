@@ -31,7 +31,7 @@ class LoginController extends Controller
 					return redirect()->route('level.index');
 					break;
 				case 'Operator':
-					return redirect()->route('level.index');
+					return redirect()->route('lelang.index');
 					break;
 				case 'Masyarakat':
 					return redirect()->route('lelang.index');
@@ -46,7 +46,7 @@ class LoginController extends Controller
 	public function logout(){
 		\Auth::logout();
 		\Session::flush();
-		return view('auth.login');
+		return redirect()->route('auth.formLogin');
 	}
 
 }

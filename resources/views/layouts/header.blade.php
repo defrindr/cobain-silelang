@@ -19,13 +19,13 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <img src="@if(\Auth::user()->level->id == 1 ||\Auth::user()->level->id == 2) /images/{{ \Auth::user()->petugas->photo }} @else /dist/img/user2-160x160.jpg @endif" class="user-image" alt="User Image">
               <span class="hidden-xs">{{ auth()->user()->username }}</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="@if(\Auth::user()->level->id == 1 ||\Auth::user()->level->id == 2) /images/{{ \Auth::user()->petugas->photo }} @else /dist/img/user2-160x160.jpg @endif" class="img-circle" alt="User Image">
 
                 <p>
                   {{ auth()->user()->username }}

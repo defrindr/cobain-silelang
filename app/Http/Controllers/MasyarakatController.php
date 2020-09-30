@@ -63,6 +63,7 @@ class MasyarakatController extends Controller
             "username" => "required|unique:users,username",
             "nama" => "required",
             "password" => "required",
+            "telp" => "required",
             "alamat" => "required",
             "photo" => "required"
         ]);
@@ -81,6 +82,7 @@ class MasyarakatController extends Controller
             $masyarakat = new Masyarakat([
                 "nama" => $request->nama,
                 "alamat" => $request->alamat,
+                "telp" => $request->telp,
                 "id_user" => $user->id,
                 "photo" => $fileName,
             ]);
@@ -144,6 +146,7 @@ class MasyarakatController extends Controller
             "username" => "required",
             "nama" => "required",
             "alamat" => "required",
+            "telp" => "required",
         ]);
 
 
@@ -167,6 +170,7 @@ class MasyarakatController extends Controller
 
             $masyarakat->nama = $request->nama;
             $masyarakat->alamat = $request->alamat;
+            $masyarakat->telp = $request->telp;
             $masyarakat->photo = $fileName;
 
             if($masyarakat->update()){

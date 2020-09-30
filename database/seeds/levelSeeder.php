@@ -14,7 +14,7 @@ class levelSeeder extends Seeder
     {
     	$data = [
     		[
-    			"nama" => "Adminstrator"
+    			"nama" => "Administrator"
     		],
     		[
     			"nama" => "Operator"
